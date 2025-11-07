@@ -1,8 +1,15 @@
 {
-  "name": "connect-vendor-web",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "thong-ui",
+  "version": "1.0.0",
+  "main": "dist/my-ui.umd.js",
+  "module": "dist/my-ui.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "peerDependencies": {
+    "vue": "^3.3.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc -b && vite build",

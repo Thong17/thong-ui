@@ -22,17 +22,6 @@
         />
       </button>
     </div>
-    <div
-      v-for="item in SIDEBAR_ITEMS"
-      :key="item.path"
-      class="grid place-items-center"
-      :style="{ width: `${SIDEBAR_COLLAPSE_WIDTH}px`, height: `${SIDEBAR_COLLAPSE_WIDTH}px` }"
-    >
-      <router-link :to="item.path" class="flex">
-        <Icon v-if="item.meta?.icon" :icon="item.meta?.icon" style="width: 24px; height: 24px" />
-        <span v-if="appStore.isSidebarOpen">{{ item.meta?.title }}</span>
-      </router-link>
-    </div>
   </div>
 </template>
 
@@ -40,12 +29,8 @@
   import { Icon } from '@iconify/vue'
   import { useAppStore } from '@/stores/app'
   import { SIDEBAR_COLLAPSE_WIDTH, SIDEBAR_EXPAND_WIDTH } from './constant'
-  import { ADMIN_ROUTES } from '@/routes'
 
   const appStore = useAppStore()
-  const SIDEBAR_ITEMS = computed(() => {
-    return ADMIN_ROUTES
-  })
 </script>
 
 <script lang="ts">

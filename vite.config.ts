@@ -6,6 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 // 👇 Auto-import Vue
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import path from 'node:path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -35,6 +36,16 @@ export default defineConfig({
     },
   },
   build: {
-    target: 'esnext',
+    lib: {
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'MyUI',
+      fileName: format => `my-ui.${format}.js`,
+    },
+    rollupOptions: {
+      external: ['vue'],
+      output: {
+        globals: { vue: 'Vue' },
+      },
+    },
   },
 })
