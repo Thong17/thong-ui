@@ -1,5 +1,5 @@
 <template>
-  <button style="background-color: rebeccapurple"><slot></slot></button>
+  <button style="background-color: aqua"><slot></slot></button>
 </template>
 
 <script>

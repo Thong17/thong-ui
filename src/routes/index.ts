@@ -6,7 +6,6 @@ export const routes: Array<RouteRecordRaw> = [
   {
     path: '/',
     redirect: '/home',
-    beforeEnter: authGuard,
     component: () => import('@/layouts/DefaultLayout.vue'),
     children: [
       ...HOME_ROUTE.ROUTES,
