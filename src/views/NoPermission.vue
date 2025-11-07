@@ -1,1 +1,0 @@
-<template>No Permission</template>

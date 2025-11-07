@@ -1,5 +1,4 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
-import { authGuard } from '@/middlewares/app/authGuard'
 import { HOME_ROUTE } from '@/modules/home/routers'
 
 export const routes: Array<RouteRecordRaw> = [
@@ -13,11 +12,6 @@ export const routes: Array<RouteRecordRaw> = [
         path: '/:pathMatch(.*)*',
         name: 'NotFound',
         component: () => import('@/views/NotFound.vue'),
-      },
-      {
-        path: '/no-permission',
-        name: 'NoPermission',
-        component: () => import('@/views/NoPermission.vue'),
       },
     ],
   },
