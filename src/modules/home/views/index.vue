@@ -1,6 +1,6 @@
 <template>
   <h1>{{ $t(route.meta.title ?? '') }}</h1>
-  <TestButton />
+  <Button>Hello</Button>
 </template>
 
 <script setup lang="ts">
