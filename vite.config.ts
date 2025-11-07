@@ -38,8 +38,8 @@ export default defineConfig({
   build: {
     lib: {
       entry: path.resolve(__dirname, 'src/index.ts'),
-      name: 'MyUI',
-      fileName: format => `my-ui.${format}.js`,
+      name: 'ThongUI',
+      fileName: format => `thong-ui.${format}.js`,
     },
     rollupOptions: {
       external: ['vue'],
