@@ -1,10 +1,10 @@
 <template>
   <DropdownMenu :options="ProfileOptions" @change="handleSelectProfileMenu">
-    <Button variant="ghost" class="rounded-full gap-0">
+    <button variant="ghost" class="rounded-full gap-0">
       <Icon icon="local:profile-circle" class="mr-2" style="width: 23px; height: 23px" />
       <span class="font-normal">Profile</span>
       <Icon icon="local:caret-down-solid" style="width: 23px; height: 23px" />
-    </Button>
+    </button>
     <template #option>
       <DropdownMenuSeparator />
       <DropdownMenuItem @click="handleLogout">
@@ -16,9 +16,7 @@
 
 <script setup lang="ts">
   import { Icon } from '@iconify/vue'
-  import { Button } from '@/components/ui/button'
   import { IDropdownProps } from '@/components/shared/DropdownMenu.vue'
-  import { DropdownMenuSeparator, DropdownMenuItem } from '@/components/ui/dropdown-menu'
   import { useAuthStore } from '@/stores/auth'
 
   const auth = useAuthStore()

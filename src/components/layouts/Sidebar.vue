@@ -7,7 +7,7 @@
       class="grid place-items-center"
       :style="{ width: `${SIDEBAR_COLLAPSE_WIDTH}px`, height: `${SIDEBAR_COLLAPSE_WIDTH}px` }"
     >
-      <Button variant="ghost" class="rounded-full" @click="appStore.toggleSidebar()">
+      <button variant="ghost" class="rounded-full" @click="appStore.toggleSidebar()">
         <Icon
           icon="local:burger"
           style="width: 24px; height: 24px"
@@ -20,7 +20,7 @@
           class="absolute rotate-90 scale-0 transition-all"
           :class="appStore.isSidebarOpen ? 'rotate-0 scale-100 opacity-100' : 'rotate-90 scale-0 opacity-0'"
         />
-      </Button>
+      </button>
     </div>
     <div
       v-for="item in SIDEBAR_ITEMS"
@@ -38,7 +38,6 @@
 
 <script setup lang="ts">
   import { Icon } from '@iconify/vue'
-  import { Button } from '@/components/ui/button'
   import { useAppStore } from '@/stores/app'
   import { SIDEBAR_COLLAPSE_WIDTH, SIDEBAR_EXPAND_WIDTH } from './constant'
   import { ADMIN_ROUTES } from '@/routes'

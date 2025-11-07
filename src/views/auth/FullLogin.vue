@@ -1,11 +1,10 @@
 <template>
   <h1>{{ $t(route.meta.title ?? '') }}</h1>
-  <Button @click="handleLogin">{{ $t('login') }}</Button>
+  <button @click="handleLogin">{{ $t('login') }}</button>
 </template>
 
 <script setup lang="ts">
   import { useAuthStore } from '@/stores/auth'
-  import { Button } from '@/components/ui/button'
 
   const route = useRoute()
   const router = useRouter()

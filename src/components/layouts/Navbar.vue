@@ -5,14 +5,14 @@
       <div class="flex gap-1 items-center">
         <slot></slot>
         <DropdownMenu :options="LanguageOptions" :value="locale" @change="handleLocaleChange">
-          <Button variant="ghost" class="rounded-full">
+          <button variant="ghost" class="rounded-full">
             <span class="rounded-full w-6 h-6 overflow-hidden">
               <img :src="EN_ICON" alt="EN" />
             </span>
-          </Button>
+          </button>
         </DropdownMenu>
         <DropdownMenu :options="ThemeOptions" :value="mode" @change="handleThemeChange">
-          <Button variant="ghost" class="rounded-full">
+          <button variant="ghost" class="rounded-full">
             <Icon
               icon="local:moon-outline"
               style="width: 24px; height: 24px"
@@ -23,7 +23,7 @@
               style="width: 24px; height: 24px"
               class="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100"
             />
-          </Button>
+          </button>
         </DropdownMenu>
         <AppProfile />
       </div>
@@ -34,7 +34,6 @@
 <script setup lang="ts">
   import { Icon } from '@iconify/vue'
   import { BasicColorMode, useColorMode } from '@vueuse/core'
-  import { Button } from '@/components/ui/button'
   import { IDropdownProps } from '@/components/shared/DropdownMenu.vue'
   import { useI18n } from 'vue-i18n'
   import EN_ICON from '@/assets/icons/en.png'
