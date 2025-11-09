@@ -56,7 +56,6 @@
         placeholder="Type or select..."
         class="flex-grow bg-transparent outline-none min-w-[100px] text-gray-700 dark:text-gray-200"
         @focus="showDropdown = true"
-        @blur="setTimeout(() => (showDropdown = false), 100)"
         @keydown="onKeyDown"
       />
     </div>
