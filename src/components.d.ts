@@ -8,6 +8,7 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    AutoComplete: typeof import('./components/shared/AutoComplete.vue')['default']
     Button: typeof import('./components/shared/Button.vue')['default']
     DropdownMenu: typeof import('./components/shared/DropdownMenu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
